@@ -24,12 +24,23 @@ $i = 0;
  * First server
  */
 $i++;
-/* Authentication type */
+
+/* Authentication type login 
 $cfg['Servers'][$i]['auth_type'] = 'cookie';
-/* Server parameters */
 $cfg['Servers'][$i]['host'] = 'localhost';
 $cfg['Servers'][$i]['compress'] = false;
-$cfg['Servers'][$i]['AllowNoPassword'] = tru;
+$cfg['Servers'][$i]['AllowNoPassword'] = true;
+*/
+
+/* Authentication type auto */
+$cfg['Servers'][$i]['host'] = 'localhost';
+$cfg['Servers'][$i]['port'] = '3306';
+$cfg['Servers'][$i]['auth_type'] = 'config';
+$cfg['Servers'][$i]['user'] = 'root';
+$cfg['Servers'][$i]['password'] = '';
+$cfg['Servers'][$i]['compress'] = false;
+$cfg['Servers'][$i]['AllowNoPassword'] = true;
+
 
 /**
  * phpMyAdmin configuration storage settings.
